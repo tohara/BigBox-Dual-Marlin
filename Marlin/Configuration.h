@@ -486,7 +486,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 #define INVERT_E3_DIR false
 
 // @section homing
-//#define MIN_Z_HEIGHT_FOR_HOMING 4 // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
+#define MIN_Z_HEIGHT_FOR_HOMING 4 // (in mm) Minimal z height before homing (G28) for Z clearance above the bed, clamps, ...
                                     // Be sure you have this distance over your Z_MAX_POS in case.
 
 // ENDSTOP SETTINGS:
@@ -645,8 +645,6 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
   //#define Z_PROBE_SLED
   //#define SLED_DOCKING_OFFSET 5 // The extra distance the X axis must travel to pickup the sled. 0 should be fine but you can push it further if you'd like.
 
-    #define Z_SAFE_HOMING_X_POINT (150)    // X point for Z homing when homing all axis (G28).
-    #define Z_SAFE_HOMING_Y_POINT (100)    // Y point for Z homing when homing all axis (G28).
 
   // If you've enabled AUTO_BED_LEVELING_FEATURE and are using the Z Probe for Z Homing,
   // it is highly recommended you also enable Z_SAFE_HOMING below!
@@ -677,7 +675,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = false; // set to true to invert the l
 // - If stepper drivers time out, it will need X and Y homing again before Z homing.
 // - Position the Z probe in a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
-//#define Z_SAFE_HOMING
+#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_MIN_POS + X_MAX_POS) / 2)    // X point for Z homing when homing all axis (G28).
